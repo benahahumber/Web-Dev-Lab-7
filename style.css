@@ -40,11 +40,9 @@ body {
     text-align: center;
     flex-grow: 1;
     /* Allows flex items to grow to fill available space */
+    position: relative;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 
 ul {
