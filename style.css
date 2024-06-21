@@ -26,6 +26,18 @@ body {
     }
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-size: 100% 100%;
+    border-radius: 15px;
+    object-fit: contain;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
 
 .flex-item {
     background-color: #353434;
@@ -43,13 +55,18 @@ body {
     position: relative;
 }
 
+/* i used your flex box cause for some reaon the task list items wouldnt place wher I want them*/
+
+* {
+    box-sizing: border-box;
+}
 
 
 ul {
     margin: 0;
     padding: 0;
 }
-
+/* what the actual shit */
 
 ul li {
     cursor: pointer;
@@ -59,7 +76,6 @@ ul li {
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
-
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -96,7 +112,7 @@ ul li.checked::before {
 
 .close {
     position: absolute;
-    right: 0;
+    right: -10px;
     top: 0;
     padding: 12px 16px 12px 16px;
 }
