@@ -10,15 +10,17 @@
 </head>
 
 <body>
-    <div id="container" class="header">
-        <h2 style="margin:5px">My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-        <span onclick="newElement()" class="addBtn">Add</span>
-    </div>
-    
-    <ul id="myUL">
-
-    </ul>
+    <header>
+        <div id="container" class="header">
+            <h2 style="margin:5px">My To Do List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+            <div class="flex-container">
+                <ul id="myUL">
+                </ul>
+            </div>
+        </div>
+    </header>
 
     <script>
 
@@ -31,7 +33,7 @@
             span.appendChild(txt);
             myNodelist[i].appendChild(span);
         }
-
+            //this shit is fucking ugly
         var close = document.getElementsByClassName("close");
         var i;
         for (i = 0; i < close.length; i++) {
@@ -47,7 +49,7 @@
                 ev.target.classList.toggle('checked');
             }
         }, false);
-
+        // oh my god it actually fucking worked
         function newElement() {
             var li = document.createElement("li");
             var inputValue = document.getElementById("myInput").value;
